@@ -7,7 +7,7 @@ import {
   FaWrench,
 } from "react-icons/fa";
 import "../Styles/Navbar.css";
-const BASE_URL = "http://localhost:4000";
+import { BASE_URL } from "./Baseurl";
 
 export default function Navbar() {
   const user = currentUser();

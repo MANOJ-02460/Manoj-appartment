@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../Styles/Vendor.css";
 
-const BASE_URL = "http://localhost:4000";
+import { BASE_URL } from "../Components/Baseurl";
 
 const Vendor = () => {
   const [searchTerm, setSearchTerm] = useState("");

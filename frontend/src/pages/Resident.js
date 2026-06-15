@@ -3,7 +3,7 @@ import EmojiPicker from "emoji-picker-react";
 import { BsEmojiSurprise } from "react-icons/bs";
 import "../Styles/Resident.css";
 
-const BASE_URL = "http://localhost:4000";
+import { BASE_URL } from "../Components/Baseurl";
 
 const servicesList = [
   "Electrician",
