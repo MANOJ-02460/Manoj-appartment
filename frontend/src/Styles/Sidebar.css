@@ -1,0 +1,282 @@
+
+
+body {
+ margin: 0px;
+ padding: 0px;
+  font-size: 16px;
+}
+
+/*  SIDEBAR  */
+
+.layout {
+  display: flex;
+  height: 100vh;
+  background: white;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 220px;
+  background: #fff;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;  
+  border-right: 0.1px solid gray;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: width 0.3s ease;
+}
+
+/*  MENU */
+
+.sidebar .menu {
+  list-style: none;
+  margin: 10px 0 10px 0;
+  padding: 0 4px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Smooth styled scrollbar */
+.sidebar .menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar .menu::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+.sidebar .menu::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Menu items */
+.sidebar .menu li {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.sidebar .menu li:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.sidebar .menu li.active {
+  background-color: #5379E8;
+  color: white;
+}
+
+/*  ICON STYLES  */
+
+.menu-icon {
+  font-size: 18px;
+  margin-right: 12px;
+  min-width: 20px;
+  color: #2D5BE3; /* Primary blue color */
+  transition: all 0.3s ease;
+}
+
+.menu li:hover .menu-icon {
+  color: #5379E8; /* Lighter blue on hover */
+  transform: scale(1.1);
+}
+
+.menu li.active .menu-icon {
+  color: white; /* White icon when active */
+}
+
+.menu-label {
+  flex: 1;
+  font-size: 14px;
+}
+
+/*  LOGO  */
+
+.logo {
+  padding: 0px;
+  margin:0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.logo img {
+  width:50px;
+  object-fit: contain;
+}
+
+/* LOGOUT */
+
+.logout {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  cursor: pointer;
+  padding: 10px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  background-color: rgba(19, 18, 18, 0.05);
+  color: #333;
+}
+
+.logout:hover {
+  background-color:rgba(255, 0, 0, 0.767);
+  color:white;
+}
+
+.logout .menu-icon {
+  color: #dc2626; 
+  margin-right: 12px;
+}
+
+.logout:hover .menu-icon {
+  color: white;
+}
+
+/*  MAIN CONTENT  */
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 220px;
+  height: 100vh;
+  overflow-y: auto;
+  transition: margin-left 0.3s ease;
+}
+
+.navbar {
+  background: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+
+
+
+
+/* Toggle button for tablet and mobile */
+.sidebar-toggle-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 250;
+  color: #2D5BE3;
+  border: none;
+  cursor: pointer;
+  display: none; /* Hidden on desktop */
+}
+
+/* Desktop (wide screens) */
+@media (min-width: 1025px) {
+  .sidebar {
+    width: 220px;
+    position: fixed;
+    height: 100vh;
+  }
+
+  .main {
+    margin-left: 220px;
+  }
+
+  .sidebar-toggle-btn {
+    display: none; /* hide toggle button */
+  }
+}
+
+/* Laptop (between 900px and 1024px) */
+@media (min-width: 900px) and (max-width: 1024px) {
+  .sidebar {
+    width: 220px;
+    position: fixed;
+    height: 100vh;
+  }
+
+  .main {
+    margin-left: 220px;
+  }
+
+  .sidebar-toggle-btn {
+    display: none; /* keep toggle hidden on laptop */
+  }
+}
+
+/* Tablet (600px to 899px) */
+@media (min-width: 600px) and (max-width: 899px) {
+  .sidebar {
+    width: 0;
+    overflow-x: hidden;
+    transition: width 0.3s ease;
+    position: fixed;
+    height: 100vh;
+    z-index: 200;
+  }
+
+  .sidebar.open {
+    width: 220px;
+  }
+
+  .main {
+    margin-left: 0; /* main takes full width when sidebar collapsed */
+    transition: margin-left 0.3s ease;
+  }
+
+  .sidebar-toggle-btn {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 250;
+  }
+}
+
+/* Mobile (less than 600px) */
+@media (max-width: 599px) {
+  .sidebar {
+    width: 0;
+    overflow-x: hidden;
+    position: fixed;
+    height: 100vh;
+    transition: width 0.3s ease;
+    z-index: 200;
+  }
+
+  .sidebar.open {
+    width: 220px;
+  }
+
+  .main {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+  }
+
+  .sidebar-toggle-btn {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 250;
+  }
+}

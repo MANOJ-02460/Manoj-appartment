@@ -1,0 +1,710 @@
+###
+POST https://appartments-backend.onrender.com/registers
+Content-Type: application/json
+
+{
+  "name": "harishhh",
+  "email": "harishhh@gmail.com",
+  "phone": "9490003434",
+  "password": "123456",
+  "role": "admin"
+}
+
+
+###
+POST https://appartments-backend.onrender.com/logins      
+Content-Type: application/json
+
+{
+   "email": "harishhh@gmail.com",
+    "password": "123456"
+}
+
+
+
+###
+GET http://localhost:4000/allusers
+Content-Type: application/json
+
+
+
+
+// --------------------------------------------------------------------------------------------//
+
+// Community //
+###
+PUT http://localhost:4000/updateCommunity/690c88cde65eb6b3e8325189
+Content-Type: application/json
+
+{
+  "name": "jc community",
+  "address": "Plot No 45, Madhapur, Hyderabad, Telangana 500081",
+  "location": "Hyderabad",
+  "description": "A premium gated community with modern amenities.",
+  "admins": ["690b23e5639dcf33474625dc"], 
+  "contactInfo": {
+    "phone": "+91-9876543210",
+    "email": "contact@greenmeadows.com",
+    "website": "https://greenmeadows.com"
+  },
+  "facilities": [
+    "Clubhouse",
+    "Swimming Pool",
+    "Gym",
+    "Children's Play Area",
+    "Garden"
+  ],
+  "image": "https://res.cloudinary.com/demo/image/upload/v1234567890/community.jpg",
+  "totalFlats": 350,
+  "residentsCount": 100
+}
+
+
+
+
+###
+GET http://localhost:4000/getAllCommunity
+Content-Type: application/json
+
+
+
+
+//------------------------------------------------------------------------------------------------//
+###
+POST http://localhost:4000/createappartment
+Content-Type: application/json
+
+{
+  "name": "war appartment",
+  "address": "Plot 42, Gachibowli, Hyderabad, Telangana 500032",
+  "location": "Hyderabad",
+  "blocks": 3,
+  "totalFlats": 0,
+  "maintenance": 1500,
+  "subAdmin": "690c939e936958eb09c0fb7d",
+  "community": "690c88cde65eb6b3e8325189",
+  "bankDetails": {
+    "accountName": "Sunrise Apartment Society",
+    "accountNumber": "1234567890",
+    "ifsc": "HDFC0001234"
+  },
+  "settings": {
+    "allowPets": true,
+    "parking": {
+      "available": true,
+      "spots": 60
+    },
+    "security": {
+      "securityGuard": true,
+      "cctv": true
+    },
+    "waterSupply": "24x7"
+  }
+}
+
+
+
+
+
+
+###
+GET  http://localhost:4000/allappartments
+Content-Type: application/json
+
+
+
+
+###
+GET http://localhost:4000/oneappartment/690dded607e2863ac90be85b
+Content-Type: application/json
+
+
+
+###
+PUT http://localhost:4000/addFlat/690c9599936958eb09c0fb8a
+Content-Type: application/json
+
+{
+  "flatId": "690c9649936958eb09c0fbb1"
+}
+
+
+//------------------------------------------------------------------------------------------------------------------------//
+
+
+
+###
+POST http://localhost:4000/createflat
+Content-Type: application/json
+
+{
+  "apartment": "690f3ed779a753548c2c370e",
+  "number": "D-1011",
+  "block": "b",
+  "floor": 2,
+  "flatType": "2BHK",
+  "sizeSqFt": 1250,
+  "parkingSlots": [
+    {
+      "number": "P-23",
+      "type": "Car"
+    },
+    {
+      "number": "B-09",
+      "type": "Bike"
+    }
+  ],
+  "isRented": false,
+  "maintenanceDue": 500,
+  "status": "Occupied",
+  "lastMaintenancePaidDate": "2025-10-10T00:00:00.000Z",
+  "notes": "Owner-occupied flat with 2 parking slots"
+}
+
+
+
+
+
+###
+GET http://localhost:4000/allflats
+Content-Type: application/json
+
+
+//------------------------------------------------------------------------------------------------//
+
+
+###
+POST http://localhost:4000/createresident
+Content-Type: application/json
+
+{
+  "user": "690c939e936958eb09c0fb7d",
+  "apartment": "690dded607e2863ac90be85b",
+  "flat": "690ddfef07e2863ac90be877",
+  "community": "690c88cde65eb6b3e8325189",
+  "isVerified": true,
+  "role": "Owner",
+  "roleInCommittee": "President",
+  "joinedDate": "2025-10-20T00:00:00.000Z",
+  "exitDate": null,
+  "emergencyContact": {
+    "name": "Ravi Kumar",
+    "phone": "9876543210"
+  },
+  "isActive": true
+}
+
+
+
+###
+GET http://localhost:4000/allresidents
+Content-Type: application/json
+
+
+
+###
+POST https://apparts.vblp-outsourcing.com/createvendors
+Content-Type: application/json
+
+{
+  "createdBy": "68f0b5a17d94014beda09fce",             
+  "name": "rahul",
+  "phone": "9876500200",
+  "email": "rahul@example.com",
+  "category": "plumber",
+  "services": ["Pipe fitting", "Leak repair", "Bathroom installation"],
+  "documents": [
+    {
+      "url": "https://example.com/certificate.pdf",
+      "type": "license"
+    },
+    {
+      "url": "https://example.com/id-proof.png",
+      "type": "id-proof"
+    }
+  ],
+  "active": true
+}
+
+
+
+
+###
+GET http://localhost:4000/allvendors
+Content-Type: application/json
+
+
+
+
+
+###
+POST http://localhost:4000/createservice
+Content-Type: application/json
+
+{
+  "apartmentId": "68ef6eccc65548c7321d1cc3",
+  "flatId": "68f876b088ccea91106ab90b",
+  "createdBy": "68f322fa196172ec316bd4ec",                   
+  "type": "electrician",
+  "subType": "shotcircuite",
+  "description": " burn on the electrica wire in the kichen.",
+  "attachments": [
+    { "url": "https://example.com/image1.jpg" },
+    { "url": "https://example.com/image2.jpg" }
+  ],
+  "preferredTime": "2025-10-20T10:30:00.000Z"
+}
+
+
+
+###
+GET https://appartments-backend.onrender.com/allservices
+Content-Type: application/json
+
+
+
+
+
+###
+PUT http://localhost:4000/services/690c666fe8709be639a4c91a/read
+Content-Type: application/json
+
+
+ 
+  
+// service detailes after assigned //
+
+###
+GET http://localhost:4000/oneservice/690f1428bf9ae2c1d3deffe4
+Content-Type: application/json
+
+
+
+
+
+
+
+###
+PUT http://localhost:4000/updateservice/691d4c5e72135005ddcd5de3/assign
+Content-Type: application/json
+
+  {
+  "vendorId": "690342798914a7799c0c7cf6"
+}
+
+
+
+
+
+
+###
+POST http://localhost:4000/createtimeline
+Content-Type: application/json
+
+{
+  "serviceRequestId": "68cc110d2a74bdca9ef31df2",
+  "status": "In Progress",
+  "by": "68caa072c415bdee083eda5b",                      // resident  of the user id //
+  "note": "Technician assigned to the request",
+  "attachments": [
+    { "url": "https://example.com/image1.jpg" },
+    { "url": "https://example.com/document1.pdf" }
+  ]
+}
+
+
+
+###
+GET http://localhost:4000/servicedetails/691d4c5e72135005ddcd5de3
+Content-Type: application/json
+
+
+
+
+
+###
+POST http://localhost:4000/createfeedback
+Content-Type: application/json
+
+{
+  "serviceRequestId": "691af8e1349c8e415428abec",
+  "rating": 5,
+  "comment": "The technician arrived on time and fixed the issue quickly.",
+  "givenBy": "690307af8914a7799c0adb8f"                                            
+}
+
+
+
+
+
+
+###
+GET http://localhost:4000/onefeedback/691c549459ff5e07bdfcc482
+Content-Type: application/json
+
+
+
+
+
+
+###
+DELETE http://localhost:4000/deletefeedback/691c549459ff5e07bdfcc482
+Content-Type: application/json
+
+
+
+
+
+
+
+
+
+###
+POST http://localhost:4000/createmaintanance
+Content-Type: application/json
+
+
+{
+  "apartmentId": "690f3ed779a753548c2c370e",
+  "common": 10000,
+  "security": 5000,
+  "waterExpenseId": "691ff9c66f0360650149fd70",
+  "electricityExpenseId": "690f1179bf9ae2c1d3def6af",
+  "createdBy": "691aaa9a8f92ab636761a50c"
+}
+
+
+
+
+
+
+
+
+
+###
+GET https://appartments-backend.onrender.com/allmaintanance
+Content-Type: application/json
+
+
+
+###
+GET http://localhost:4000/flat/68fc9ba62956ed59bb9160d2
+Content-Type: application/json
+
+
+
+
+
+###
+DELETE http://localhost:4000/deleteexpences/68fc921eb7e2bd6906bd32d8
+Content-Type: application/json
+
+
+###
+PUT http://localhost:4000/flat/updateReading/690f3f7779a753548c2c38cc
+Content-Type: application/json
+
+{
+  "previous": 530,
+  "current": 570
+}
+  
+
+
+###
+POST http://localhost:4000/createwater
+Content-Type: application/json
+
+
+{
+  "apartmentId": "690f3ed779a753548c2c370e",
+  "createdBy": "691aaa9a8f92ab636761a50c",
+  "bore": [
+    {
+      "date": "2025-08-01",
+      "tankerType": "bore",
+      "tankers": 100,
+      "capacity": 10000,
+      "perLiterCost": 1.00
+    },
+    {
+      "date": "2025-08-10",
+      "tankerType": "bore",
+      "tankers": 5,
+      "capacity": 10000,
+      "perLiterCost": 1.00
+    }
+  ],
+  "manjeera": [
+    {
+      "date": "2025-08-10",
+      "tankerType": "manjeera",
+      "tankers": 2,
+      "capacity": 5000,
+      "perLiterCost": 2.00
+    }
+  ]
+}
+
+
+
+
+###
+PUT http://localhost:4000/updatewater/6921a0749d529cb87078612a
+Content-Type: application/json
+
+
+{
+  "bore": [
+    {
+      "_id": "6921a0749d529cb87078612b",
+      "tankers": 80,
+      "capacity": 10000,
+      "perLiterCost": 1.00
+    }
+  ],
+   "manjeera": [
+    {
+      "_id": "6921a0749d529cb87078612d",
+      "tankers": 60,
+      "capacity": 5000,
+      "perLiterCost": 2.00
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+###
+PUT http://localhost:4000/updatewater/691ff9c66f0360650149fd70
+Content-Type: application/json
+
+
+{
+  "apartmentId": "690f3ed779a753548c2c370e",
+  "createdBy": "691aaa9a8f92ab636761a50c",
+  "bore": [
+    {
+      "date": "2025-08-01",
+      "tankerType": "bore",
+      "tankers": 5,
+      "capacity": 10000,
+      "perLiterCost": 1.00
+    },
+    {
+      "date": "2025-08-10",
+      "tankerType": "bore",
+      "tankers": 7,
+      "capacity": 10000,
+      "perLiterCost": 1.00
+    }
+  ],
+  "manjeera": [
+    {
+      "date": "2025-08-10",
+      "tankerType": "manjeera",
+      "tankers": 4,
+      "capacity": 5000,
+      "perLiterCost": 2.00
+    }
+  ]
+}
+
+
+
+
+
+
+###
+GET http://localhost:4000/allwater
+Content-Type: application/json
+
+
+
+###
+GET http://localhost:4000/water/datewise/690f3ed779a753548c2c370e
+Content-Type: application/json
+
+
+
+
+
+
+
+
+###
+DELETE http://localhost:4000/deleteTanker/690f18e679a753548c2bcc3e/bore/690f18e679a753548c2bcc3f
+Content-Type: application/json
+
+
+
+
+###
+POST http://localhost:4000/createelectricity
+Content-Type: application/json
+
+{
+  "apartmentId": "690c9599936958eb09c0fb8a",
+  "readings": [
+    {
+      "meterId": "E101",
+      "block": "A1",
+      "usage": 0,
+      "cost": 0,
+      "date": "2025-11-06"
+    },
+    {
+      "meterId": "E102",
+      "block": "A1",
+      "usage": 0,
+      "cost": 0,
+      "date": "2025-11-06"
+    }
+  ],
+  "createdBy": "68cbdeaf7aa042995fbc66ae"
+}
+
+
+
+
+
+
+
+
+
+# {
+#   "apartmentId": "6908549afe1a2065e391a34c",
+#   "readings": [
+#     {
+#       "meterId": "MTR-101",
+#       "block": "A",
+#       "usage": "250",
+#       "cost": "1200",
+#       "date": "2025-11-04"
+#     }
+#   ],
+#   "createdBy":"68cbdeaf7aa042995fbc66ae"
+# }
+
+
+
+###
+GET http://localhost:4000/allelectricity
+Content-Type: application/json
+
+
+###
+PUT http://localhost:4000/updateelectricity/6926a37916deb5340e34c9d0
+Content-Type: application/json
+
+{
+  "apartmentId": "690c9599936958eb09c0fb8a",
+  "readings": [
+    {
+      "_id": "6926a37916deb5340e34c9d1",
+      "meterId": "E101",
+      "block": "A1",
+      "usage": 50,
+      "cost": 250,
+      "date": "2025-11-20"
+    },
+    {
+      "_id": "6926a37916deb5340e34c9d2",
+      "meterId": "E102",
+      "block": "A1",
+      "usage": 70,
+      "cost": 350,
+      "date": "2025-11-20"
+    }
+  ],
+  "totalCost": 600,
+  "createdBy": "68cbdeaf7aa042995fbc66ae"
+}
+
+
+
+
+
+
+
+###
+POST http://localhost:4000/createnotification
+Content-Type: application/json
+
+{
+  "toUser": "68f0b5a17d94014beda09fce",
+  "toRole": "resident",
+  "title": "System Update",
+  "body": "A new system update will be deployed tonight at 11 PM.",
+  "payload": {
+    "version": "v2.1.4",
+    "urgency": "high"
+  },
+  "channel": "firebase"
+}
+
+
+
+###
+GET http://localhost:4000/allnotifications
+Content-Type: application/json
+
+
+###
+PUT http://localhost:4000/notifications/markAllAsRead
+Content-Type: application/json
+
+{
+  "toUser": "68f0b5a17d94014beda09fce"
+}
+
+
+
+
+###
+GET http://localhost:4000/specificNotification/68f0b5a17d94014beda09fce
+Content-Type: application/json
+
+###
+DELETE http://localhost:4000/deletenotification/6901fc148914a7799c09f5be
+Content-Type: application/json
+
+
+
+###
+POST http://localhost:4000/allcommittes
+Content-Type: application/json
+
+
+
+
+
+
+
+
+###
+GET http://localhost:4000/auditlogs
+Content-Type: application/json
+
+
+
+
+###
+PUT http://localhost:4000/expenses/68ccea8028e7a183bc9b7a9a
+Content-Type: application/json
+
+{
+  "apartmentId": "68cbae3cea1ac2e165007d08",
+  "amount": 13000,
+  "purpose": "Purchase of cleaning supplies",
+  "createdBy": "68cbdeaf7aa042995fbc66ae",                                     
+  "receipts": [
+    { "url": "https://myfiles.com/receipts/cleaning_supplies_invoice.pdf" }   
+  ]
+}

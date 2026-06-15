@@ -1,0 +1,95 @@
+/* Page Background  */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+     background:whitesmoke;
+
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+}
+
+/*  Header  */
+.auth-header {
+  font-size:32px;
+  text-align: center;
+  color:gray;
+  font-weight: 800px;
+}
+.auth-header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+   font-size:32px;
+  text-align: center;
+  color:gray;
+  font-weight: 800px;
+}
+.auth-header p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/*  Cards Grid  */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1000px;
+  
+}
+
+/*  Individual Card  */
+.auth-card {
+  background-color: #2D5BE3;
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 25px 15px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+.auth-card:hover {
+  transform: translateY(-6px);
+  background:  #5379E8;
+}
+
+/*  Image  */
+.card-image {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 10px;
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*  Card Text  */
+.card-content h3 {
+  font-size: 1.2rem;
+  margin: 6px 0;
+}
+.card-content p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/*  Responsive  */
+@media (max-width: 600px) {
+  .auth-header h1 {
+    font-size: 1.6rem;
+  }
+  .auth-card {
+    padding: 20px;
+  }
+  .card-image {
+    width: 70px;
+    height: 70px;
+  }
+}

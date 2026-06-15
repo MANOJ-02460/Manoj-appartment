@@ -1,0 +1,295 @@
+
+body {
+   font-size: 16px;
+}
+
+.expense-container {
+  padding: 20px;
+  color: #1f2937;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  color: gray;
+}
+
+/* ===========================
+   TABS
+   =========================== */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 18px;
+  background: #e2e8f0;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: #1e293b;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+.tab:hover {
+  background: #cbd5e1;
+}
+
+.tab.active {
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.4);
+}
+
+/* ===========================
+   SECTION TITLE
+   =========================== */
+.section-title {
+  margin: 20px 0 10px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+/* ===========================
+   TABLES
+   =========================== */
+.expense-table,
+.summary-horizontal-table,
+.water-tanker-table,
+.sub-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.expense-table th,
+.summary-horizontal-table th,
+.water-tanker-table th,
+.sub-table th {
+  background: #2563eb;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.expense-table td,
+.summary-horizontal-table td,
+.water-tanker-table td,
+.sub-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.expense-table tr:hover {
+  background: #f1f5f9;
+}
+
+
+/* ===========================
+   MODAL
+   =========================== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modal-box {
+  background: white;
+  padding: 25px;
+  width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  animation: popIn 0.25s ease-out;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-box label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.modal-box input,
+.modal-box select {
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+  margin-top: 6px;
+}
+
+.modal-box input:focus,
+.modal-box select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 4px rgba(37, 99, 235, 0.4);
+}
+
+/* ===========================
+   DETAILS BOX (View/Hide)
+   =========================== */
+.details-box {
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===========================
+   DROPDOWN
+   =========================== */
+.dropdown {
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: white;
+  min-width: 220px;
+  cursor: pointer;
+  outline: none;
+  transition: 0.25s;
+}
+
+.dropdown:hover {
+  border-color: #2563eb;
+}
+
+.dropdown:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 4px rgba(37, 99, 235, 0.4);
+}
+
+/* WATER TAB BUTTONS */
+.water-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;        /* ⭐ FIX: allows wrapping instead of compressing */
+}
+
+.water-tabs .tab {
+  flex: 0 0 auto;        /* ⭐ prevents full stretch */
+  padding: 10px 16px;    /* ⭐ smaller padding */
+  min-width: 160px;      /* ⭐ perfect button width */
+  text-align: center;
+}
+
+
+
+
+/* ===========================
+   RESPONSIVE TABLE WRAPPER
+   =========================== */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+/* Smooth scroll on mobile */
+.table-responsive::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: #e5e7eb;
+}
+
+/* ===========================
+   STACKED TABLE FOR SMALL SCREENS
+   =========================== */
+@media (max-width: 720px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  table {
+    border: none;
+  }
+
+  thead {
+    display: none; /* Hide table header */
+  }
+
+  tr {
+    margin-bottom: 15px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.07);
+  }
+
+  td {
+    border: none;
+    padding: 8px 0;
+    position: relative;
+    padding-left: 120px;
+    text-align: left;
+    font-size: 15px;
+  }
+
+  td::before {
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    width: 100px;
+    font-weight: 600;
+    color: #1e3a8a;
+    text-transform: capitalize;
+    font-size: 14px;
+    content: attr(data-label);
+  }
+}

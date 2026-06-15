@@ -1,0 +1,237 @@
+ /* Flat Management Page Styles */
+
+ .flat-page .flat-container {
+
+   background: #ffffff;
+   display: flex;
+   flex-direction: column;
+
+   font-size: 16px;
+   position: relative;
+
+
+ }
+
+ .flat-table tbody tr:hover {
+   background-color: rgba(128, 128, 128, 0.048);
+ }
+
+ .flat-page .flat-container h1 {
+   font-size: 32px;
+   text-align: center;
+   color: gray;
+   font-weight: 800px;
+ }
+
+ /* Gradient for table header */
+ table.flat-table thead.flat-fix {
+   background: #2D5BE3;
+   color: white;
+
+
+
+   /* text color */
+ }
+
+ table.flat-table thead.flat-fix th {
+   background: #2D5BE3;
+   padding: 12px 15px;
+   text-align: left;
+   font-weight: bold;
+   border-bottom: 2px solid #6A89A7;
+   color: white;
+ }
+
+ .flat-page .top-bar input::placeholder {
+   color: #888;
+ }
+
+ .flat-page .top-bar input:focus {
+   outline: none;
+   border-color: #666;
+ }
+
+
+
+ /*  Flats Table */
+ .flat-page .flat-table {
+   width: 100%;
+   max-width: 1100px;
+   border-collapse: collapse;
+   background: #ffffff;
+   color: black;
+   border: 1px solid #ccc;
+   font-size: 16px;
+ }
+
+ .flat-page .flat-table th,
+ .flat-page .flat-table td {
+   padding: 12px 15px;
+   border: 1px solid #ddd;
+   font-size: 16px;
+ }
+
+ .flat-page .flat-table th {
+   background: #f5f5f5;
+   font-size: 16px;
+
+ }
+
+ /* Popup Overlay */
+ .flat-page .popup-overlay {
+   position: fixed;
+   inset: 0;
+   background: rgba(0, 0, 0, 0.5);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 10;
+ }
+
+ /* Popup Box */
+ .flat-page .popup-box {
+   background: #ffffff;
+   color: #333;
+   border-radius: 10px;
+   padding: 30px;
+   width: 500px;
+   max-width: 90%;
+ }
+
+ .flat-page .popup-box h2 {
+   text-align: center;
+   margin-bottom: 20px;
+   color: gray;
+   font-weight: 700;
+ }
+
+
+ .flat-page .form-grid {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+ }
+
+ .flat-page .form-grid label {
+   display: flex;
+   flex-direction: column;
+
+   font-weight: 500;
+   color: #333;
+ }
+
+ .flat-page .form-grid input {
+   padding: 6px;
+   border: 1px solid #ccc;
+   border-radius: 6px;
+   background-color: #f9fafb;
+
+ }
+
+
+ .flat-page .form-grid select {
+   padding: 6px;
+   border: 1px solid #ccc;
+   border-radius: 6px;
+   background-color: #f9fafb;
+
+ }
+
+ .parking-section .parking-row {
+   display: flex;
+   gap: 10px;
+   margin: 6px;
+
+ }
+
+ .parking-section select {
+   padding: 6px;
+   border: 1px solid #ccc;
+   border-radius: 6px;
+   background-color: #f9fafb;
+
+
+ }
+
+ .popup-actions {
+   text-align: right;
+   margin-top: 15px;
+   display: flex;
+   gap: 20px;
+ }
+
+ .filter-searchc {
+   display: flex;
+
+   justify-content: end;
+   gap: 5px;
+   margin-right: 12px;
+ }
+
+ .filter-searchc input[type="text"] {
+   width: 20%;
+   margin: 10px;
+ }
+
+ /* Responsive wrapper to enable horizontal scroll */
+ .flat-table-responsive {
+   width: 98%;
+   overflow-x: auto;
+   -webkit-overflow-scrolling: touch;
+   padding: 10px;
+
+   /* smooth scroll on mobile */
+ }
+
+ /* Minimum width to ensure the table overflows and scroll activates */
+ .flat-page .flat-table {
+   min-width: 100%;
+   /* adjust this depending on your table's columns */
+   width: 100%;
+   border-collapse: collapse;
+   background: #ffffff;
+   color: black;
+   border: 1px solid #ccc;
+   font-size: 16px;
+
+
+ }
+
+ /* Optional: Scrollbar styling for better UX */
+ .flat-table-responsive::-webkit-scrollbar {
+   height: 8px;
+ }
+
+ .flat-table-responsive::-webkit-scrollbar-thumb {
+   border-radius: 4px;
+ }
+
+
+ @media (max-width: 1024px) {
+
+   .flat-table-responsive {
+     overflow-x: auto;
+   }
+ }
+
+ @media (min-width: 1025px) {
+
+   /* laptop and desktop */
+   .flat-table-responsive {
+     overflow-x: auto;
+     /* keep scroll in case of narrow windows */
+   }
+
+   .filter-searchc {
+     display: flex;
+
+     justify-content: end;
+     gap: 5px;
+     margin-right: 12px;
+   }
+
+   .filter-searchc input[type="text"] {
+     width: 20%;
+     margin: 10px;
+   }
+ }

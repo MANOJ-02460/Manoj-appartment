@@ -1,0 +1,210 @@
+.request-container {
+  padding: 0px;
+  margin: 0px;
+   font-size: 16px;
+  
+}
+
+.page-title {
+  font-size:32px;
+  text-align: center;
+  color:gray;
+  font-weight: 800px;
+}
+
+/* .filter-search {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.filter-search input {
+  width: 70%;
+  padding: 08px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 16px;
+} */
+
+
+/* Table Styles */
+.vendor-table {
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+.vendor-table th,
+.vendor-table td {
+  border: 1px solid #ddd;
+  text-align: center;
+  vertical-align: middle;
+  
+}
+
+.vendor-table th {
+  background-color: #2d5de3;
+  color: white;
+
+
+}
+.vendor-table tr{
+  background-color: white;
+}
+.vendor-table tr:hover {
+  background-color: rgba(128, 128, 128, 0.048);
+}
+
+
+/* Status Colors */
+.status.pending {
+  color: orange;
+}
+
+.status.progress {
+  color: #2563eb;
+}
+
+.status.completed {
+  color: green;
+}
+
+/* Popup */
+
+.popup-overlay-service {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(3px);
+}
+
+/* Popup Container */
+.popup-box-service {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 36px;
+  width: 73vw !important;
+  max-width: 1300px !important;
+  max-height: 85vh;
+  overflow-y: auto;
+  overflow-x: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popup-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #222;
+}
+
+
+
+/* Card Style for Each Service */
+.modern-table-service {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+
+
+.modern-table-service thead {
+  background: #f5f7fa;
+}
+
+.modern-table-service th {
+  
+  padding: 8px;
+  font-family: sans-serif;
+  color: white;
+  background-color: #2d5de3;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.modern-table-service td {
+  padding: 8px 9px;
+  border: 1px solid #ddd;
+  color: #222;
+  font-size: 15px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.modern-table-service tr
+{
+  background-color: white;
+}
+.modern-table-service tr:hover {
+
+  background-color: rgba(128, 128, 128, 0.048);
+
+}
+
+
+
+
+
+
+
+
+.created-by-info {
+  background: #f9f9f9;
+  padding: 8px;
+  border-radius: 6px;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+
+.status-badge {
+  display: inline-block;
+  padding: 5px 4px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+
+.status-badge.completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-badge.cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-badge.neutral {
+  color: #6c757d;
+  font-style: italic;
+}
+
+.action-note {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: #777;
+}

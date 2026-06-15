@@ -1,0 +1,357 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+   font-size: 16px;
+}
+
+.resident-container {
+  padding: 0px;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.page-title {
+   font-size:32px;
+  text-align: center;
+  color:gray;
+  font-weight: 800px;
+}
+
+.filter-search {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.filter-search input {
+  width: 70%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+
+.resident-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid lightgray;
+  /* margin-bottom: 20px; */
+  background-color: #FFF;
+  /* box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  table-layout: auto; */
+}
+
+.resident-table thead tr th {
+  background-color: #2d5de3;
+  color: #fff;
+}
+
+
+.resident-table th,
+.resident-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid lightgray;
+  font-size: 14px;
+  white-space: wrap;
+}
+
+.resident-table th {
+  background-color: #6A89A7;
+  font-weight: 600;
+}
+
+.resident-table tr:hover {
+  background-color: rgba(128, 128, 128, 0.048);
+}
+
+
+
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.popup-box {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px 15px;
+  width: 400px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+}
+
+.popup-box h2 {
+  margin-top: 0;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.details-form input,
+.details-form select,
+.details-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 6px 0 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.details-form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.details-form label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.details-form .checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  flex-wrap: wrap;
+}
+
+.details-form input[type="checkbox"] {
+  margin: 0;
+}
+
+
+.popup-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+
+.notification-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.notification-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 6px;
+  border-bottom: 1px solid #eee;
+}
+
+.notification-item span {
+  font-size: 14px;
+}
+
+.service-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+}
+
+.table-wrapper {
+  width: 98%;
+  margin: 25px auto;
+  background: #2d5de3;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Main table */
+.resident-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+
+.resident-table td {
+  padding: 12px 12px;
+  border-bottom: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  font-size: 16px;
+  /* ➤ column separator */
+
+}
+
+.resident-table th {
+  padding: 14px 12px;
+  text-align: left;
+  background: #2d5de3;
+  color: #fff;
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+  font-size: 16px;
+  /* ➤ light line in header */
+}
+
+/* Remove last column border for smooth rounded look */
+.resident-table td:last-child,
+.resident-table th:last-child {
+  border-right: none;
+}
+
+
+/* HEADER */
+.resident-table thead tr {
+  /* Navy Blue */
+  color: #fff;
+  font-weight: 600;
+}
+
+
+
+.resident-table tbody tr:nth-child(even) {
+  background: #f7f8fb;
+}
+
+.resident-table tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+/* Hover effect clean */
+.resident-table tbody tr:hover {
+  background: #eaf2ff;
+  transition: 0.2s ease;
+}
+/* ================= SELECT & INPUT ================= */
+.popup-box select,
+.notification-input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 10px;
+  border: 1px solid #ccd6f8;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #f9fbff;
+  transition: 0.25s;
+}
+
+.popup-box select:focus,
+.notification-input:focus {
+  border-color: #2d5de3;
+  box-shadow: 0 0 6px rgba(45, 93, 227, 0.35);
+  outline: none;
+}
+
+/* ================= TEXTAREA ================= */
+.textarea-container {
+  position: relative;
+  margin-top: 12px;
+}
+
+.notification-textarea {
+  width: 100%;
+  height: 120px;
+  padding: 12px;
+  border: 1px solid #ccd7ee;
+  border-radius: 10px;
+  resize: vertical;
+  font-size: 14px;
+  background: #f9fbff;
+}
+
+/* ================= EMOJI PICKER ================= */
+.textarea-actions {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.emoji-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.emoji-picker-box {
+  position: absolute;
+  bottom: 45px;
+  right: 0;
+  z-index: 3000;
+}
+
+/* ================= POPUP BUTTONS ================= */
+.notifiction-btn {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+/* Close Button */
+.notifiction-btn button:first-child {
+  padding: 8px 14px;
+  background: #e63946;
+  color: #fff;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Send Button */
+.notifiction-btn button:last-child {
+  padding: 8px 16px;
+  background: #2d5de3;
+  color: #fff;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.notifiction-btn button:hover {
+  opacity: 0.9;
+  transform: scale(0.95);
+}
+@media screen and (max-width: 1024px) {
+  .filter-search input[type="text"] {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .resident-table th,
+  .resident-table td {
+    font-size: 12px;
+    padding: 6px 8px;
+    white-space: normal;
+  }
+
+  .popup-box {
+    width: 90%;
+    padding: 15px 20px;
+  }
+}

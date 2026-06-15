@@ -1,0 +1,145 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+     font-size: 16px;
+    user-select: none;
+}
+
+.navbar-title {
+     font-size:32px;
+  text-align: center;
+  color:gray;
+  font-weight: 800px;
+
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.notification-wrapper {
+    position: relative;
+}
+
+.notification-icon {
+    font-size: 24px;
+    color: rgb(255, 196, 0);
+    cursor: pointer;
+}
+
+.notification-icon:focus {
+    outline: none;
+    
+}
+
+.notification-badges {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    display: flex;
+    gap: 3px;
+    padding: 0;
+    font-size: 12px;
+}
+
+.badge {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.badge.red {
+    background-color: red;
+    margin-right: 3px;
+}
+
+.badge.green {
+    background-color: green;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 230px;
+    z-index: 1000;
+    padding: 10px;
+}
+
+.dropdown-item {
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+    font-weight: 600;
+}
+
+.count {
+    margin-left: auto;
+    font-weight: 400;
+    color: gray;
+}
+
+.count.red {
+    color: red;
+    font-weight: 600;
+}
+
+.count.green {
+    color: green;
+    font-weight: 600;
+}
+
+.dropdown-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.dropdown-icon.red {
+    color: gray;
+}
+
+.dropdown-icon.green {
+    color: gray;
+}
+
+.user-name {
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+@media (max-width: 899px) and (min-width: 600px) {
+    .navbar-title {
+        font-weight: bold;
+        font-size: 18px;
+        padding-left:10%;
+
+    }
+
+}

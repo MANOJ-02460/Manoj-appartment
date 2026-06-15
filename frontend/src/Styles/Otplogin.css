@@ -1,0 +1,85 @@
+/* Background */
+.otp-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(239, 231, 232, 0.267);
+   font-size: 16px;
+}
+
+/* Card */
+.otp-login-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.otp-login-card h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.form input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  outline: none;
+}
+
+.btn-primary {
+  background: #4a69bd;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #1e3799;
+}
+.error {
+  color: #c00;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.muted {
+  color: #666;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.test-otp {
+  background: #f1f1f1;
+  border-radius: 5px;
+  padding: 6px;
+  margin-top: 10px;
+}
+
+/* Link styles */
+.extra-links {
+  margin-top: 12px;
+}
+
+.extra-links a {
+  text-decoration: none;
+  color: #4a3fda;
+  font-weight: 500;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,13 @@
+# Root folder
+.DS_Store
+
+# Backend
+backend/node_modules/
+backend/.env
+backend/.env.local
+
+# Frontend
+frontend/node_modules/
+frontend/build/
+frontend/.env
+frontend/.env.local

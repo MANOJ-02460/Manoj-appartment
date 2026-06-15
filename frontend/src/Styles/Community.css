@@ -1,0 +1,393 @@
+/* ------------  Styles ------------ */
+body {
+  background:white;
+   margin: 0px;
+ 
+  padding: 0px;
+  font-size: 16px;
+}
+
+
+
+/* Main Container */
+
+.management-container .page-title {
+   font-size:32px;
+  text-align: center;
+  color:gray;
+  font-weight: 800px;
+}
+
+/* Community Cards Section */
+.management-container .community-cards-section {
+  margin-bottom: 40px;
+  padding: 20px 0;
+}
+
+.management-container .section-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+/* Grid cards */
+.community-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding:10px;
+}
+
+/* Single card */
+.community-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.community-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.card-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.community-card:hover .card-image img {
+  transform: scale(1.08);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 10px 0;
+}
+
+.card-location {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin: 0 0 16px 0;
+}
+
+/* Card Stats */
+.card-stats-detailed {
+  display: grid;
+  grid-template-columns: auto auto;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 2px solid #e8f5e9;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px;
+  background: #f8fafb;
+  border-radius: 8px;
+}
+
+.stat-item:hover {
+  background: #e8f5e9;
+}
+
+.stat-icon-small {
+  font-size: 16px;
+  color: #2D5BE3;;
+  width: 25px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(76, 175, 80, 0.1);
+  border-radius: 8px;
+}
+
+.stat-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #7f8c8d;
+  text-transform: uppercase;
+}
+
+/* Tab Section */
+.tab-section {
+  margin-top: 40px;
+}
+
+/* Buttons */
+
+.back-btn {
+  
+  color:  #2D5BE3;
+
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 0px;
+  border-color: white;
+  background-color: white;;
+}
+
+.back-btn:hover {
+  background:white;
+}
+
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.tab-btn {
+  background: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  color: black;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-btn.active {
+  color: white;
+  border-bottom: 3px solid #2D5BE3;
+  font-weight: 600;
+}
+
+
+
+.filter-searchc{
+  display:flex;
+
+ justify-content: end;
+ gap:5px;
+ margin-right: 12px;
+}
+.filter-searchc input[type="text"]{
+  width:20%;
+   margin:10px;
+}
+
+
+
+
+
+
+/* Tables */
+.data-table-wrapper {
+  width:98%;
+   overflow-x: auto;
+   -webkit-overflow-scrolling: touch;
+   padding:0px 10px;
+}
+ .data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 14px;
+  table-layout: fixed; 
+   background: #fff;
+  margin-top: 20px;
+  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  width: 100%;
+ 
+  overflow: visible;/* Fixed layout so columns fit inside */
+}
+
+.data-table thead {
+  background-color: #2D5BE3;
+}
+
+
+.data-table th{
+  background: #2D5BE3;
+  color:white;
+   padding: 8px;
+  text-align: left;
+  border: 1px solid #f7f8fb;
+  white-space: normal !important;
+  font-size: 16px;
+
+}
+.data-table td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #f7f8fb;
+  white-space: normal !important;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+   font-size: 16px;
+}
+
+
+.data-table td {
+  border-bottom: 1px solid #f7f8fb;
+  color: black;
+}
+
+.data-table tbody tr:hover {
+  background: rgba(76, 175, 80, 0.05);
+}
+
+.highlighted-row {
+  background-color: #e8f5e9 !important;
+  font-weight: 500;
+}
+
+
+/* Popup Styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-box {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  padding: 40px 36px;
+  max-width: 550px;
+  max-height: 88vh;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.popup-box h2 {
+  margin-bottom: 24px;
+  text-align: center;
+  color: #2c3e50;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+
+
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.form-group select[multiple] {
+  min-height: 120px;
+}
+
+
+.data-table {
+  min-width: 900px; /* Ensures scroll appears */
+}
+
+/* Wrap the table in this div in React */
+/* 4 columns → Desktop */
+.community-cards-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Tablets (max-width: 992px): show 2 columns */
+@media (max-width: 992px) {
+  .community-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tab-btn {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile (max-width: 600px): show 1 column */
+@media (max-width: 600px) {
+  .community-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title {
+    font-size: 26px;
+  }
+
+  .filter-search {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filter-search input {
+    width: 100%;
+  }
+}
